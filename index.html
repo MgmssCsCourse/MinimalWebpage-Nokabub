@@ -30,22 +30,21 @@
         }
     </script>
 
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Farbe ändern</title>
+    <title>Spiel starten</title>
 </head>
-<body style="text-align:center; font-family:Arial;">
+<body>
 
-    <h1>Farbe per Button ändern</h1>
+    <button onclick="startGame()">Spiel starten</button>
 
-    <button onclick="document.body.style.backgroundColor='red'">Rot</button>
-    <button onclick="document.body.style.backgroundColor='blue'">Blau</button>
-    <button onclick="document.body.style.backgroundColor='green'">Grün</button>
-    <button onclick="document.body.style.backgroundColor='yellow'">Gelb</button>
+    <script>
+        function startGame() {
+            window.location.href = "spiel.html";
+        }
+    </script>
 
 </body>
 </html>
