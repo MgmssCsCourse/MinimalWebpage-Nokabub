@@ -17,17 +17,17 @@
 </head>
 <body style="text-align:center; font-family:Arial;">
 
-    <h1>Hintergrundfarbe ändern</h1>
+    <h1>Farbe ändern</h1>
 
-    <p>Wähle eine Farbe:</p>
-    <input type="color" id="farbe" value="#ffffff">
+    <button onclick="setFarbe('red')">Rot</button>
+    <button onclick="setFarbe('blue')">Blau</button>
+    <button onclick="setFarbe('green')">Grün</button>
+    <button onclick="setFarbe('yellow')">Gelb</button>
 
     <script>
-        const farbe = document.getElementById("farbe");
-
-        farbe.addEventListener("input", function () {
-            document.body.style.backgroundColor = farbe.value;
-        });
+        function setFarbe(farbe) {
+            document.body.style.backgroundColor = farbe;
+        }
     </script>
 
 </body>
@@ -36,21 +36,17 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Farbe per Button</title>
+    <title>Farbe ändern</title>
 </head>
 <body style="text-align:center; font-family:Arial;">
 
-    <h1>Farbe ändern</h1>
+    <h1>Farbe per Button ändern</h1>
 
-    <button onclick="farbeWechseln()">Farbe ändern</button>
-
-    <script>
-        function farbeWechseln() {
-            const farben = ["red", "blue", "green", "yellow", "purple", "orange"];
-            const zufall = Math.floor(Math.random() * farben.length);
-            document.body.style.backgroundColor = farben[zufall];
-        }
-    </script>
+    <button onclick="document.body.style.backgroundColor='red'">Rot</button>
+    <button onclick="document.body.style.backgroundColor='blue'">Blau</button>
+    <button onclick="document.body.style.backgroundColor='green'">Grün</button>
+    <button onclick="document.body.style.backgroundColor='yellow'">Gelb</button>
 
 </body>
 </html>
+
