@@ -68,4 +68,52 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Zahlen-Ratespiel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 18px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎮 Zahlen-Ratespiel</h1>
+    <p>Rate eine Zahl zwischen <strong>1 und 10</strong></p>
+
+    <button onclick="raten()">Raten</button>
+
+    <p id="ausgabe"></p>
+
+    <script>
+        let geheimzahl = Math.floor(Math.random() * 10) + 1;
+
+        function raten() {
+            let tipp = prompt("Gib eine Zahl zwischen 1 und 10 ein:");
+
+            if (tipp === null) return;
+
+            if (parseInt(tipp) === geheimzahl) {
+                document.getElementById("ausgabe").innerText =
+                    "🎉 Richtig! Neue Zahl wurde gewählt.";
+                geheimzahl = Math.floor(Math.random() * 10) + 1;
+            } else {
+                document.getElementById("ausgabe").innerText =
+                    "❌ Falsch! Versuch es erneut.";
+            }
+        }
+    </script>
+
+</body>
+</html>
 
