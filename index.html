@@ -5,7 +5,52 @@
         <title>Ich bins doch</title>
     </head>
     <body>
-		<h1>Ich freue mich auf die Weinachtsferien.Ich liebe an Weinchten die Geschenke und das Essen</h1>
+		<h1></h1>
         <big>Ich will Heim </big>
 	</body>
+</html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Farbe ändern</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+    <h1>Hintergrundfarbe ändern</h1>
+
+    <p>Wähle eine Farbe:</p>
+    <input type="color" id="farbe" value="#ffffff">
+
+    <script>
+        const farbe = document.getElementById("farbe");
+
+        farbe.addEventListener("input", function () {
+            document.body.style.backgroundColor = farbe.value;
+        });
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Farbe per Button</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+    <h1>Farbe ändern</h1>
+
+    <button onclick="farbeWechseln()">Farbe ändern</button>
+
+    <script>
+        function farbeWechseln() {
+            const farben = ["red", "blue", "green", "yellow", "purple", "orange"];
+            const zufall = Math.floor(Math.random() * farben.length);
+            document.body.style.backgroundColor = farben[zufall];
+        }
+    </script>
+
+</body>
 </html>
