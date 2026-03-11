@@ -12,108 +12,192 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Farbe & Spiel</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            transition: background-color 0.5s;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Bundesliga – Deutschlands Top Liga</title>
 
-        button {
-            padding: 12px 20px;
-            font-size: 16px;
-            margin: 10px;
-            cursor: pointer;
-        }
-    </style>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background-image:url("https://upload.wikimedia.org/wikipedia/commons/7/7a/Bundesliga_logo_%282017%29.svg");
+    background-size:cover;
+    background-attachment:fixed;
+    color:#222;
+}
+
+header{
+    background:rgba(0,0,0,0.7);
+    color:white;
+    padding:30px;
+    text-align:center;
+}
+
+nav{
+    background:#c40000;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    background:rgba(255,255,255,0.9);
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+}
+
+h2{
+    color:#c40000;
+}
+
+img{
+    width:100%;
+    max-width:600px;
+    border-radius:10px;
+}
+
+footer{
+    background:#111;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+</style>
 </head>
+
 <body>
 
-    <h1>Button Demo</h1>
+<header>
+<h1>Die Bundesliga</h1>
+<p>Alles über Deutschlands höchste Fußballliga</p>
+</header>
 
-    <button onclick="farbeAendern()">🎨 Farbe ändern</button>
-    <button onclick="spielStarten()">🎮 Spiel starten</button>
+<nav>
+<a href="#inhalt">Inhaltsangabe</a>
+<a href="#themen">Themen</a>
+<a href="#funfacts">Fun Facts</a>
+<a href="#quellen">Quellen</a>
+<a href="#nutzung">Nutzungsbedingungen</a>
+</nav>
 
-    <p id="spielText"></p>
+<section id="inhalt">
+<h2>Inhaltsangabe</h2>
+<p>
+Die Bundesliga ist die höchste Spielklasse im deutschen Fußball. Auf dieser
+Website erfährst du wichtige Informationen über die Geschichte, Vereine,
+Spieler und Besonderheiten der Liga.
+</p>
 
-    <script>
-        // ---------- Farbe ändern ----------
-        function farbeAendern() {
-            const farben = ["lightblue", "lightgreen", "lightpink", "lightyellow", "lavender"];
-            const zufallsFarbe = farben[Math.floor(Math.random() * farben.length)];
-            document.body.style.backgroundColor = zufallsFarbe;
-        }
+<ul>
+<li>Geschichte der Bundesliga</li>
+<li>Bekannte Vereine</li>
+<li>Legendäre Spieler</li>
+<li>Stadien</li>
+<li>Fans</li>
+<li>Rekorde</li>
+<li>Der Spielmodus</li>
+<li>Internationale Bedeutung</li>
+<li>Jugendförderung</li>
+<li>Zukunft der Bundesliga</li>
+</ul>
+</section>
 
-        // ---------- Spiel ----------
-        let geheimzahl = Math.floor(Math.random() * 10) + 1;
+<section id="themen">
+<h2>10 Themen zur Bundesliga</h2>
 
-        function spielStarten() {
-            let eingabe = prompt("Rate eine Zahl zwischen 1 und 10:");
+<h3>1. Geschichte</h3>
+<p>Die Bundesliga wurde 1963 gegründet und ist seitdem die höchste deutsche Fußballliga.</p>
 
-            if (eingabe === null) return;
+<h3>2. Vereine</h3>
+<p>Zu den bekanntesten Vereinen gehören:</p>
+<ul>
+<li>FC Bayern München</li>
+<li>Borussia Dortmund</li>
+<li>RB Leipzig</li>
+<li>Bayer 04 Leverkusen</li>
+</ul>
 
-            if (parseInt(eingabe) === geheimzahl) {
-                document.getElementById("spielText").innerText =
-                    "🎉 Richtig! Neue Zahl wurde gewählt.";
-                geheimzahl = Math.floor(Math.random() * 10) + 1;
-            } else {
-                document.getElementById("spielText").innerText =
-                    "❌ Falsch! Versuch es nochmal.";
-            }
-        }
-    </script>
+<h3>3. Spielmodus</h3>
+<p>18 Mannschaften spielen eine Saison mit Hin- und Rückrunde.</p>
+
+<h3>4. Stadien</h3>
+<p>Die Bundesliga hat einige der größten Stadien Europas.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Signal_Iduna_Park.jpg" alt="Bundesliga Stadion">
+
+<h3>5. Fans</h3>
+<p>Die Liga ist bekannt für ihre leidenschaftlichen Fans und volle Stadien.</p>
+
+<h3>6. Rekorde</h3>
+<p>Der Rekordmeister ist Bayern München mit den meisten Meisterschaften.</p>
+
+<h3>7. Spieler</h3>
+<p>Viele internationale Topspieler haben in der Bundesliga gespielt.</p>
+
+<h3>8. Internationale Wettbewerbe</h3>
+<p>Bundesliga-Teams spielen regelmäßig in der Champions League und Europa League.</p>
+
+<h3>9. Jugendförderung</h3>
+<p>Deutschland ist bekannt für seine starken Nachwuchsakademien.</p>
+
+<h3>10. Zukunft</h3>
+<p>Die Bundesliga entwickelt sich ständig weiter – mit neuen Technologien und jungen Talenten.</p>
+
+</section>
+
+<section id="funfacts">
+<h2>Fun Facts</h2>
+
+<ol>
+<li>Die Bundesliga hat durchschnittlich mehr Stadionbesucher als viele andere europäische Ligen.</li>
+<li>Das schnellste Tor der Bundesliga fiel nach nur wenigen Sekunden.</li>
+</ol>
+
+</section>
+
+<section id="links">
+<h2>Interessante Links</h2>
+
+<ul>
+<li><a href="https://www.bundesliga.com" target="_blank">Offizielle Bundesliga Website</a></li>
+<li><a href="https://de.wikipedia.org/wiki/Bundesliga" target="_blank">Bundesliga auf Wikipedia</a></li>
+<li><a href="https://www.dfb.de" target="_blank">Deutscher Fußball-Bund</a></li>
+</ul>
+
+</section>
+
+<section id="quellen">
+<h2>Quellen</h2>
+
+<ul>
+<li>Wikipedia – Bundesliga</li>
+<li>Bundesliga.com</li>
+<li>DFB.de</li>
+<li>Wikimedia Commons (Bilder)</li>
+</ul>
+
+</section>
+
+<section id="nutzung">
+<h2>Nutzungsbedingungen</h2>
+
+<p>
+Diese Website dient nur zu Informations- und Schulzwecken.  
+Alle verwendeten Bilder stammen aus frei nutzbaren Quellen.
+Externe Links führen zu Webseiten Dritter, für deren Inhalte keine Haftung übernommen wird.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 Bundesliga Fan Website | Schulprojekt</p>
+</footer>
 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <title>Zahlen-Ratespiel</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        button {
-            padding: 10px 18px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>🎮 Zahlen-Ratespiel</h1>
-    <p>Rate eine Zahl zwischen <strong>1 und 10</strong></p>
-
-    <button onclick="raten()">Raten</button>
-
-    <p id="ausgabe"></p>
-
-    <script>
-        let geheimzahl = Math.floor(Math.random() * 10) + 1;
-
-        function raten() {
-            let tipp = prompt("Gib eine Zahl zwischen 1 und 10 ein:");
-
-            if (tipp === null) return;
-
-            if (parseInt(tipp) === geheimzahl) {
-                document.getElementById("ausgabe").innerText =
-                    "🎉 Richtig! Neue Zahl wurde gewählt.";
-                geheimzahl = Math.floor(Math.random() * 10) + 1;
-            } else {
-                document.getElementById("ausgabe").innerText =
-                    "❌ Falsch! Versuch es erneut.";
-            }
-        }
-    </script>
-
-</body>
-</html>
-
